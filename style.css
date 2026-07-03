@@ -1,0 +1,295 @@
+:root {
+  --paper: #FAFAF8;
+  --paper-alt: #F1F0EB;
+  --ink: #1A1A1A;
+  --ink-soft: #55524C;
+  --accent: #2B3A55;
+  --line: #DEDACE;
+
+  --font-serif: "Noto Serif JP", serif;
+  --font-sans: "Noto Sans JP", "Inter", sans-serif;
+
+  --max-width: 1040px;
+  --max-width-narrow: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wrap-narrow {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.wordmark:hover { text-decoration: none; opacity: 0.75; }
+
+.site-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.site-nav a {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+.site-nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: 96px 0;
+}
+
+.section-alt {
+  background: var(--paper-alt);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0 0 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 140px 0 112px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  margin: 0 0 28px;
+  max-width: 14ch;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 0 0 40px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--paper);
+}
+.btn-primary:hover {
+  background: #1f2b3f;
+  text-decoration: none;
+}
+
+/* ---------- About / Culture ---------- */
+
+.section p { margin: 0 0 20px; color: var(--ink-soft); }
+.section p:last-child { margin-bottom: 0; }
+
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.plain-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+.plain-list li:last-child { border-bottom: none; }
+
+/* ---------- Business grid ---------- */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  padding: 32px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ---------- Careers ---------- */
+
+.careers-role {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin: 0 0 16px;
+}
+
+.careers-lead {
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 40px;
+}
+
+.careers-table, .company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.careers-table th, .careers-table td,
+.company-table th, .company-table td {
+  text-align: left;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.careers-table th, .company-table th {
+  width: 30%;
+  font-weight: 700;
+  color: var(--ink);
+  padding-right: 24px;
+}
+
+.careers-table td, .company-table td {
+  color: var(--ink-soft);
+}
+
+.note {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+
+.careers-cta {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.apply-note {
+  margin: 16px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.site-footer p { margin: 0 0 6px; }
+.copyright { opacity: 0.7; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .hero { padding: 96px 0 72px; }
+  .hero h1 { font-size: 2rem; }
+  .section { padding: 64px 0; }
+  .site-nav { gap: 18px; }
+  .site-nav a { font-size: 0.82rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .careers-table th, .company-table th { width: 40%; }
+}
+
+@media (max-width: 480px) {
+  .site-nav a:nth-child(3) { display: none; }
+  .header-inner { height: 60px; }
+  .careers-table th, .careers-table td,
+  .company-table th, .company-table td {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+  }
+  .careers-table th, .company-table th {
+    border-bottom: none;
+    padding-top: 18px;
+  }
+  .careers-table td, .company-table td {
+    padding-bottom: 18px;
+  }
+}
